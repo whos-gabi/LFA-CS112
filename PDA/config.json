@@ -1,0 +1,14 @@
+{
+    "states": ["q0", "q1"],
+    "input_alphabet": ["(", ")"],
+    "stack_alphabet": ["Z", "("],
+    "transitions": [
+        ["q0", "(", "Z", "q0", ["(", "Z"]],
+        ["q0", "(", "(", "q0", ["(", "("]],
+        ["q0", ")", "(", "q0", ["ε"]],
+        ["q0", "ε", "Z", "q1", ["Z"]]
+    ],
+    "start_state": "q0",
+    "accept_states": ["q1"],
+    "stack": ["Z"]
+}
